@@ -1,0 +1,16 @@
+<% for(var i = 0; i< aspirantes.length; i++){%>
+<tr>
+    <td><%= i + 1%></td>
+    <td><%= aspirantes[i].nombre%></td>
+    <td><%= aspirantes[i].correo%></td>
+    <td><%= aspirantes[i].identificacion%></td>
+    <td>
+        <a href="/update-aspirante?id=<%= aspirantes[i]._id%>" class="btn border-shandow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a  class="btn border-shandow delete" data-id=<%= aspirantes[i]._id%>>
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% }%>

@@ -1,0 +1,22 @@
+<!-- Formulario-->
+<form action="/api/inscripciones" method="POST" id="add_inscripcion">
+    <div class="new_inscripcion">
+        <div class="form-group">
+            <label for="fecha" class="text-light">Fecha</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="fecha" value="" placeholder="Ejemplo: 10/10/2022">
+        </div>
+        <div class="form-group">
+            <label for="hora" class="text-light">Hora</label>
+            <input type="text" name="hora" value="" placeholder="Ejemplo: 10:00">
+        </div>
+        <div class="form-group">
+            <label for="valor_cancelar" class="text-light">Valor Cancelar</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="valor_cancelar" value="" placeholder="Ejemplo: $ 20" >
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Guardar</button>
+        </div>
+    </div>
+</form>

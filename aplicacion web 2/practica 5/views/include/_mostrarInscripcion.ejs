@@ -1,0 +1,16 @@
+<% for(var i = 0; i< inscripciones.length; i++){%>
+    <tr>
+        <td><%= i + 1%></td>
+        <td><%= inscripciones[i].fecha%></td>
+        <td><%= inscripciones[i].hora%></td>
+        <td><%= inscripciones[i].valor_cancelar%></td>
+        <td>
+            <a href="/update-inscripcion?id=<%= inscripciones[i]._id%>" class="btn border-shandow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a  class="btn border-shandow delete" data-id=<%= inscripciones[i]._id%>>
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% }%>

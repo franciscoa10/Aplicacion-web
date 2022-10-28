@@ -1,0 +1,28 @@
+<!--include header-->
+<%- include('include/_headerCurso')%>
+<!--/include header-->
+
+<!--Sitio Principal-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/curso"> <i class="fas fa-angle-double-left"></i> Todos los Cursos</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark"> Nuevo Curso</h2>
+            <span class="text-light">Use el nuevo formulario para crear un nuevo curso</span>
+        </div>
+
+        <!--add user form-->
+        <%- include('include/_formCurso')%>
+        
+
+    </div>
+</main>
+<!--/Sitio Principal-->
+
+<!--include footer-->
+<%- include('include/_footerCurso')%>
+<!--/include footer-->

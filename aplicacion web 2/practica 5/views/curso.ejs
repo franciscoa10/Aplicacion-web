@@ -1,0 +1,37 @@
+<!--include header-->
+<%- include('include/_headerCurso')%>
+<!--/include header-->
+
+   <!--Sitio Principal-->
+   <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-curso" class="border-shadow">
+                <span class="text-gradient">Nuevo Curso <i class="fa-solid fa-circle-user"></i></span>
+            </a>
+        </div>
+        <!-- Formulario-->
+        <form action="/curso" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripcion</th>
+                        <th>Fecha Inicio</th>
+                        <th>Hora Inicio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--los datos a mostrar-->
+                    <%- include('include/_mostrarCurso')%>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!--/Sitio Principal-->
+
+<!--include footer-->
+<%- include('include/_footerCurso')%>
+<!--/include footer-->
