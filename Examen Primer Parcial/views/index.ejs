@@ -1,0 +1,37 @@
+<!--include header-->
+<%- include('include/_header')%>
+<!--/include header-->
+
+   <!--Sitio Principal-->
+   <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-aspirante" class="border-shadow">
+                <span class="text-gradient">Nuevo Aspirante <i class="fa-solid fa-circle-user"></i></span>
+            </a>
+        </div>
+        <!-- Formulario-->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>@Correo</th>
+                        <th>Identificacion</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--los datos a mostrar-->
+                    <%- include('include/_mostrar')%>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!--/Sitio Principal-->
+
+<!--include footer-->
+<%- include('include/_footer')%>
+<!--/include footer-->

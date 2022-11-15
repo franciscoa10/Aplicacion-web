@@ -1,0 +1,66 @@
+<!--include header-->
+<%- include('include/_headerCurso')%>
+<!--/include header-->
+
+<!--Sitio Principal-->
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <div class="filter">
+        <a href="/curso">
+          <i class="fas fa-angle-double-left"></i> Todos los Cursos</a
+        >
+      </div>
+    </div>
+    <div class="form-title text-center">
+      <h2 class="text-dark">Actualizar Curso</h2>
+      <span class="text-light"
+        >Use el nuevo formulario para actualizar un curso</span
+      >
+    </div>
+
+    <!--add user form-->
+    <!-- Formulario-->
+    <form method="POST" id="update_curso">
+      <!--ESTE DEBE QUEDAR ASI (update_curso) POR LOS ESTILOS-->
+      <div class="new_curso">
+        <div class="form-group">
+          <label for="descripcion" class="text-light">Descripcion</label>
+          <input type="hidden" name="id" value="<%= curso._id %>" />
+          <input
+            type="text"
+            name="descripcion"
+            value="<%= curso.descripcion %>"
+            placeholder="Ejemplo: Programacion"
+          />
+        </div>
+        <div class="form-group">
+          <label for="fecha_inicio" class="text-light">Fecha Inicio</label>
+          <input
+            type="text"
+            name="fecha_inicio"
+            value="<%= curso.fecha_inicio %>"
+            placeholder="Ejemplo: 10/10/2022"
+          />
+        </div>
+        <div class="form-group">
+          <label for="hora_inicio" class="text-light">Hora Inicio</label>
+          <input
+            type="text"
+            name="hora_inicio"
+            value="<%= curso.hora_inicio %>"
+            placeholder="Ejemplo: 10:00"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn text-dark update">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
+<!--/Sitio Principal-->
+
+<!--include footer-->
+<%- include('include/_footerCurso')%>
+<!--/include footer-->

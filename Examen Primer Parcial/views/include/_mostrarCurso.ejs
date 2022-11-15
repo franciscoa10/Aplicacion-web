@@ -1,0 +1,16 @@
+<% for(var i = 0; i< cursos.length; i++){%>
+    <tr>
+        <td><%= i + 1%></td>
+        <td><%= cursos[i].descripcion%></td>
+        <td><%= cursos[i].fecha_inicio%></td>
+        <td><%= cursos[i].hora_inicio%></td>
+        <td>
+            <a href="/update-curso?id=<%= cursos[i]._id%>" class="btn border-shandow update"><!--Este debe quedar asi(update-curso) porque va enlazado con routerCurso-->
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a  class="btn border-shandow delete" data-id=<%= cursos[i]._id%>>
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% }%>

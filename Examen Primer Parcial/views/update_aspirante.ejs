@@ -1,0 +1,48 @@
+<!--include header-->
+<%- include('include/_header')%>
+<!--/include header-->
+
+<!--Sitio Principal-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"> <i class="fas fa-angle-double-left"></i> Todos los Aspirantes</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark"> Actualizar Aspirante</h2>
+            <span class="text-light">Use el nuevo formulario para actualizar un  aspirante</span>
+        </div>
+
+        <!--add user form-->
+        <!-- Formulario-->
+<form  method="POST" id="update_aspirante">
+    <div class="new_aspirante">
+        <div class="form-group">
+            <label for="nombre" class="text-light">Nombre</label>
+            <input type="hidden" name="id" value="<%= aspirante._id %>">
+            <input type="text" name="nombre" value="<%= aspirante.nombre %>" placeholder="Ejemplo: Pedro">
+        </div>
+        <div class="form-group">
+            <label for="correo" class="text-light">Correo</label>
+            <input type="text" name="correo" value="<%= aspirante.correo %>" placeholder="Ejemplo: pedro@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="identificacion" class="text-light">Identificacion</label>
+            <input type="number" name="identificacion" value="<%= aspirante.identificacion %>" placeholder="Ejemplo: 1315678956" >
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Guardar</button>
+        </div>
+    </div>
+</form>
+        
+
+    </div>
+</main>
+<!--/Sitio Principal-->
+
+<!--include footer-->
+<%- include('include/_footer')%>
+<!--/include footer-->
