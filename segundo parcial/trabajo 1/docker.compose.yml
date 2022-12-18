@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    depends_on:
+      - mongodb
+    environment:
+      - PORT=9999
+      - MONGODB_CNN=mongodb://mongo:27017/test
+    ports:
+      - "9999:9999"
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
