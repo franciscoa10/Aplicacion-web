@@ -1,0 +1,33 @@
+version: '3'
+
+
+services:
+  aspirante:
+    build: ./Microservice/aspirante-service
+    depends_on:
+      - mongo
+    environment:
+      - PORT=9999
+      - MONGODB_CNN=mongodb://mongo:27017/aspirante
+  curso:
+    build: ./Microservice/curso-service
+    depends_on:
+      - mongo
+    environment:
+      - PORT=9999
+      - MONGODB_CNN=mongodb://mongo:27017/curso
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - aspirante
+      - curso
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
